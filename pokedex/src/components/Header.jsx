@@ -8,7 +8,7 @@ function Header () {
             <div className="header">
                 <div className="title">
                     <img src={pokeball} alt="logo-pokeball"className="pokeball" />
-                    <h1>Pokedex</h1>
+                    <h1>Pokédex</h1>
                 </div>
                 <div className="title2">
                 <span>#</span>
