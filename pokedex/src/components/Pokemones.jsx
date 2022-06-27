@@ -1,4 +1,5 @@
-import "./componentes.css";
+import "./pokemones.css";
+import Pokemon from "./CartaP"  
 
 function Pokemones() {
   const pokemons = [
@@ -158,7 +159,23 @@ function Pokemones() {
       number: "#304",
     },
   ];
-  return <main></main>;
+  return(
+    <main>
+    <div className="container">
+    
+     
+    {pokemons.map((pokemon)=>(
+            <Pokemon pokemon={pokemon}/>
+        ))}
+    
+
+
+    </div>
+     
+
+    </main>
+  );
 }
+
 
 export default Pokemones;
