@@ -1,5 +1,14 @@
 import "./pokemones.css";
-import Pokemon from "./CartaP"  
+import Pokemon from "./CartaP"
+// import "..assets/bulbasaur.png"  
+// import "..assets/charmander.png"  
+// import "..assets/squirtle.png"  
+// import "..assets/aron.png"  
+// import "..assets/butterfree.png"  
+// import "..assets/ditto.png" 
+// import "..assets/gastly.png"  
+// import "..assets/mew.png"  
+// import "..assets/pikachu.png"   
 
 function Pokemones() {
   const pokemons = [
@@ -157,6 +166,7 @@ function Pokemones() {
       description:
         "This POKéMON has a body of steel. To make its body, ARON feeds on iron ore that it digs from mountains. Occasionally, it causes major trouble by eating bridges and rails.",
       number: "#304",
+      
     },
   ];
   return(
