@@ -10,22 +10,22 @@
   margin-top: 20px;
   border-radius: 10px;
   position: relative;
- 
-
+  border-color: red;
 }
 
-.number{
+.number {
   position: absolute;
   right: 5px;
 }
 
-.imagen{
+.imagen {
   background-color: white;
-  border-top: 20px;
   
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
-.nombre{
+.nombre {
   color: white;
   display: flex;
   justify-content: center;
