@@ -8,19 +8,32 @@ import arrow from "../assets/Arrow.svg";
 
 function Pokemones() {
   const [pokemons, setpokemons] = useState(constantepokemons);
+  const filtrado =(nuevoFiltrado)=>{
+   const NuevoFiltrado =[...setpokemons].filter
+
+  }
+
+
+
+
+
+
+
+
   const alfabeticamente = (nuevopokemons) => {
     const listaNueva = [...pokemons].sort((a, z) =>
       a.name.localeCompare(z.name)
     );
     setpokemons(listaNueva);
   };
-  const numericamente = (nuevopokemons) => {
-    const listaalfabetica = [...pokemons].sort((a, z) =>
+  const numericamente = (nuevopokemonsN) => {
+    const listanumerica = [...pokemons].sort((a, z) =>
       a.number.localeCompare(z.number)
     );
-    setpokemons(listaalfabetica);
+    setpokemons(listanumerica);
   };
-
+  const funcionDeOrdenado =
+    pokemons[0].number === "#001" ? alfabeticamente : numericamente;
   return (
     <>
       <header>
@@ -32,7 +45,7 @@ function Pokemones() {
           <div className="title2">
             <span>#</span>
             <img
-              onClick={alfabeticamente}
+              onClick={funcionDeOrdenado}
               src={arrow}
               alt="flecha"
               className="flecha"
