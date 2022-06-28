@@ -1,8 +1,10 @@
 import "./App.css";
 import Header from "./components/Header";
 import Pokemones from "./components/Pokemones";
-import pokemons from "../constantes/listapokemones";
+import pokemons from "../src/constantes/listapokemones"
+
 function App() {
+  
   
   return (
     <div className="App">
@@ -11,5 +13,7 @@ function App() {
     </div>
   );
 }
+
+
 
 export default App;

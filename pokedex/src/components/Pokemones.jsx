@@ -1,31 +1,27 @@
 import "./pokemones.css";
 import Pokemon from "./CartaP";
+import constantepokemons from "../constantes/listapokemones";
+import React, {useState} from "react";
 
-
-// import "..assets/bulbasaur.png"
-// import "..assets/charmander.png"
-// import "..assets/squirtle.png"
-// import "..assets/aron.png"
-// import "..assets/butterfree.png"
-// import "..assets/ditto.png"
-// import "..assets/gastly.png"
-// import "..assets/mew.png"
-// import "..assets/pikachu.png"
 
 function Pokemones() {
+
+    const [pokemons, setpokemons] = useState(constantepokemons);
+    
   
-     {/* {pokemons.sort((pokemonesOrdenados,sa da ) => (
-          <pokemonesOrdenados Header={pokemonesOrdenados} />
-        ))} */}
   return (
     <main>
-      <div className="container">
+      {<div className="container">
         {pokemons.map((pokemon) => (
           <Pokemon key={pokemon.name} pokemon={pokemon} />
         ))}
 
+       
+        {/* {pokemons.map((pokemon) => (
+          <Pokemon key={pokemon.atk} pokemon={pokemon} />
+        ))} */}
     
-      </div>
+      </div> }
     </main>
   );
 }
