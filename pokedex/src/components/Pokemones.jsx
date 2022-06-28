@@ -8,17 +8,13 @@ import arrow from "../assets/Arrow.svg";
 
 function Pokemones() {
   const [pokemons, setpokemons] = useState(constantepokemons);
-  const filtrado =(nuevoFiltrado)=>{
-   const NuevoFiltrado =[...setpokemons].filter
 
-  }
-
-
-
-
-
-
-
+  const filtrado = (evento) => {
+    const nuevoFiltrado = [...constantepokemons].filter((element) =>
+      element.name.toLowerCase().includes(evento.target.value.toLowerCase())
+    );
+    setpokemons(nuevoFiltrado);
+  };
 
   const alfabeticamente = (nuevopokemons) => {
     const listaNueva = [...pokemons].sort((a, z) =>
@@ -53,7 +49,13 @@ function Pokemones() {
           </div>
         </div>
         <div className="delInput">
-          <input type="text" name="" id="" placeholder="Buscar" />
+          <input
+            onChange={filtrado}
+            type="text"
+            name=""
+            id=""
+            placeholder="Buscar"
+          />
         </div>
       </header>
       <main>
