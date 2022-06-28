@@ -2,7 +2,8 @@ import "./header.css"
 import pokeball from "../assets/Pokeball.png"
 import arrow from "../assets/Arrow.svg"
 
-function Header () {
+function Header ({pokemonesOrdenados}) {
+    
     return (
         <header>
             <div className="header">
@@ -12,10 +13,12 @@ function Header () {
                 </div>
                 <div className="title2">
                 <span>#</span>
-                <img src={arrow} alt="flecha" className="flecha"/>
+                <img onClick={pokemonesOrdenados} src={arrow} alt="flecha" className="flecha"/>
                 </div>
             </div>
+            <div className="delInput">
             <input type="text" name="" id="" placeholder="Buscar"/>
+            </div>
 
         </header>
     )
