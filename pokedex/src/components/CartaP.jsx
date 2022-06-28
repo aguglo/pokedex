@@ -8,9 +8,9 @@ console.log("hola")
     <div className="container">
       
       <div style={{backgroundColor: pokemon.color}} className="row">
-      <span className="number">{pokemon.number}</span>
-        <img onClick={click} src={imagen} alt="" />
-        <h1>{pokemon.name}</h1>
+      <span style= {{color:pokemon.color}} className="number">{pokemon.number}</span>
+        <img className="imagen" onClick={click} src={imagen} alt="" />
+        <h1 className="nombre">{pokemon.name}</h1>
       </div>
     </div>
   );
