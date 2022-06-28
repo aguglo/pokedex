@@ -17,10 +17,7 @@ function Pokemones() {
         ))}
 
        
-        {/* {pokemons.map((pokemon) => (
-          <Pokemon key={pokemon.atk} pokemon={pokemon} />
-        ))} */}
-    
+       
       </div> }
     </main>
   );

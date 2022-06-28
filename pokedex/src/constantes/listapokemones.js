@@ -13,6 +13,7 @@ const pokemons = [
       type1: "grass",
       type2: "poison",
       number: "#001",
+      color: "#74CB48",
       description:
         "It carries a seed on its back right from birth. As it grows older, the seed also grows larger.",
     },
@@ -31,6 +32,7 @@ const pokemons = [
       type1: "fire",
       type2: "",
       number: "#004",
+      color: "#F57D31",
       description:
         "The flame on its tail shows the strength of its life force. If it is weak, the flame also burns weakly",
     },
@@ -49,6 +51,7 @@ const pokemons = [
       type1: "water",
       type2: "",
       number: "#007",
+      color: "#6493EB",
       description:
         "Shoots water at prey while in the water. Withdraws into its shell when in danger",
     },
@@ -66,6 +69,7 @@ const pokemons = [
       type1: "bug",
       type2: "flying",
       number: "#012",
+      color: "#A7B723",
       description:
         "In battle, it flaps its wings at high speed to release highly toxic dust into the air",
     },
@@ -83,6 +87,7 @@ const pokemons = [
       type1: "electric",
       type2: "",
       number: "#025",
+      color: "#F9CF30",
       description:
         "It keeps its tail raised to monitor its surroundings. If you yank its tail, it will try to bite you",
     },
@@ -99,6 +104,7 @@ const pokemons = [
       moves: "levitate",
       type1: "ghost",
       type2: "poison",
+      color: "#70559B",
       description:
         "Almost invisible, this gaseous POKéMON cloaks the target and puts it to sleep without notice.",
       number: "#082",
@@ -116,6 +122,7 @@ const pokemons = [
       moves: "limber,imposter",
       type1: "normal",
       type2: "",
+      color: "#AAA67F",
       description:
         "Capable of copying an enemy's genetic code to instantly transform itself into a duplicate of the enemy.",
       number: "#132",
@@ -133,6 +140,7 @@ const pokemons = [
       moves: "synchronize",
       type1: "psychic",
       type2: "",
+      color: "#FB5584",
       description:
         "So rare that it is still said to be a mirage by many experts. Only a few people have seen it worldwide.",
       number: "#182",
@@ -150,6 +158,7 @@ const pokemons = [
       moves: "rock-head heavy-metal",
       type1: "steel",
       type2: "rock",
+      color: "#B789D0",
       description:
         "This POKéMON has a body of steel. To make its body, ARON feeds on iron ore that it digs from mountains. Occasionally, it causes major trouble by eating bridges and rails.",
       number: "#304",

@@ -6,7 +6,9 @@ console.log("hola")
   }
   return (
     <div className="container">
-      <div className="row">
+      
+      <div style={{backgroundColor: pokemon.color}} className="row">
+      <span className="number">{pokemon.number}</span>
         <img onClick={click} src={imagen} alt="" />
         <h1>{pokemon.name}</h1>
       </div>
@@ -14,3 +16,6 @@ console.log("hola")
   );
 }
 export default Pokemon;
+
+
+{/* <main className={data.types[0].type.name}/> */}

@@ -9,6 +9,12 @@
   width: 200px;
   background-color: rgb(110, 89, 57);
   margin-top: 20px;
-  border-radius: 20px;
+  border-radius: 10px;
+  position: relative;
+
 }
 
+.number{
+  position: absolute;
+  right: 5px;
+}
