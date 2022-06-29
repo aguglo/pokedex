@@ -17,7 +17,7 @@ const pokemons = [
     number: "#001",
     color: "#74CB48",
     description:
-      "It carries a seed on its back right from birth. As it grows older, the seed also grows larger.",
+      "There isaplant seed on its back right from the day this Pokémon is born.The seed slowly grows larger",
   },
 
   {

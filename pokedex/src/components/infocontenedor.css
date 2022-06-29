@@ -12,9 +12,12 @@ nav {
 div > header > nav {
   color: white;
 }
-.tipos{
-    display: flex;
-    gap: 40px;
+.tipos {
+  display: flex;
+  gap: 40px;
+}
+h3 {
+  text-align: center;
 }
 .div {
   height: 400px;
@@ -32,6 +35,10 @@ header {
   height: 200px;
   width: 100%;
 }
+.img {
+  display: flex;
+  flex-direction: row-reverse;
+}
 
 .imageni {
   position: absolute;
@@ -39,7 +46,24 @@ header {
   top: 60px;
 }
 
-.tipos{
-    border-radius: 14px;
-    padding: 4px;
+.tipos {
+  border-radius: 14px;
+  padding: 4px;
+}
+.informacion {
+  display: flex;
+  gap: 20px;
+}
+.lista {
+  list-style: none;
+}
+.lalista {
+  display: flex;
+}
+.contiene {
+  display: flex;
+}
+.barrauno {
+  width: 100px;
+  background-color: antiquewhite;
 }
