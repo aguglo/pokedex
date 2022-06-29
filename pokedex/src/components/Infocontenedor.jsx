@@ -6,40 +6,30 @@ function Infocontenedor({ info }) {
   if (info) {
     const imagen = require(`../assets/${info.name.toLowerCase()}.png`);
     return (
-      <div>
-        <header>
+      <div className="div">
+        <header style={{ backgroundColor: info.color }}>
+          <nav>
+            <div className="nav">
+              <img src={arrowleft} />
+              <h1>{info.name}</h1>
+            </div>
 
-        <nav>
-
-          <div className="nav">
-            <img src={arrowleft} />
-          <h1>{info.name}</h1>          
+            <p>{info.number}</p>
+          </nav>
+          <div>
+            <img className="imageni" src={imagen} alt="" />
+            <p>></p>
           </div>
-
-          <p>{info.number}</p>
-          
-        </nav>
-
-        <img src={imagen} alt="" />
-        <p>></p>
-
         </header>
 
-        
-
         <main>
-
-        <div>
-            <span>{info.type1}</span>            
-            <span>{info.type2}</span>
+          <div className="tipos">
+            <span style={{ backgroundColor: info.color }} className="tipos">{info.type1}</span>
+            <span style={{ backgroundColor: info.color }} className="tipos">{info.type2}</span>
           </div>
 
           <h3>About</h3>
-
-          
-
         </main>
-
       </div>
     );
   }
