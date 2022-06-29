@@ -2,6 +2,7 @@ import "./pokemones.css";
 import Pokemon from "./CartaP";
 import constantepokemons from "../constantes/listapokemones";
 import React, { useState } from "react";
+import Infocontenedor from "./Infocontenedor";
 
 import pokeball from "../assets/Pokeball.png";
 import arrow from "../assets/Arrow.svg";
@@ -38,6 +39,7 @@ function Pokemones() {
             <img src={pokeball} alt="logo-pokeball" className="pokeball" />
             <h1>Pokédex</h1>
           </div>
+
           <div className="title2">
             <span>#</span>
             <img
@@ -64,19 +66,15 @@ function Pokemones() {
             {pokemons.map((pokemon) => (
               <Pokemon key={pokemon.name} pokemon={pokemon} />
             ))}
-            {/* {
-          pokemons.sort((pokemonesOrdenados)=>(
-          <Header key={pokemons.name}pokemonesOrdenados={pokemonesOrdenados}/>
-
-          )
-          
-          
-          
-          )
-        } */}
           </div>
         }
       </main>
+
+      <div className="contenedor">
+        {pokemons.map((info) => (
+          <Infocontenedor key={info.number} info={info} />
+        ))}
+      </div>
     </>
   );
 }
