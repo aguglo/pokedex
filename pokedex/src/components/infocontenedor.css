@@ -38,3 +38,8 @@ header {
   left: 230px;
   top: 60px;
 }
+
+.tipos{
+    border-radius: 14px;
+    padding: 4px;
+}

@@ -24,8 +24,8 @@ function Infocontenedor({ info }) {
 
         <main>
           <div className="tipos">
-            <span style={{ backgroundColor: info.color }} className="tipos">{info.type1}</span>
-            <span style={{ backgroundColor: info.color }} className="tipos">{info.type2}</span>
+            <span style={{ backgroundColor: info.type1color }} className="tipos">{info.type1}</span>
+            <span style={{ backgroundColor: info.type2color }} className="tipos">{info.type2}</span>
           </div>
 
           <h3>About</h3>
