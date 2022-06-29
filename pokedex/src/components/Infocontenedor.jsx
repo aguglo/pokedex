@@ -80,17 +80,29 @@ function Infocontenedor({ info }) {
                   </ul>
                 </div>
                 <div class="barra">
-                  <ul className="lista" style={{ color: info.color }}>
+                  <ul className="lista2" style={{ color: info.color }}>
                     <li>
-                      <LinearProgress variant="determinate" value={info.hp} />
+                      <LinearProgress
+                        className="span"
+                        variant="determinate"
+                        value={info.hp}
+                      />
                     </li>
                     <li>
                       <LinearProgress variant="determinate" value={info.atk} />
                     </li>
-                    <li>{info.def}</li>
-                    <li>{info.satk}</li>
-                    <li>{info.sdef}</li>
-                    <li>{info.spd}</li>
+                    <li>
+                      <LinearProgress variant="determinate" value={info.def} />
+                    </li>
+                    <li>
+                      <LinearProgress variant="determinate" value={info.satk} />
+                    </li>
+                    <li>
+                      <LinearProgress variant="determinate" value={info.sdef} />
+                    </li>
+                    <li>
+                      <LinearProgress variant="determinate" className="holas" value={info.spd} />
+                    </li>
                   </ul>
                 </div>
               </div>

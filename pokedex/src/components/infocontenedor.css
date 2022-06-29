@@ -56,9 +56,24 @@ header {
 }
 .lista {
   list-style: none;
+  padding: 0px;
+  gap: 10px;
+  display: flex;
+  width: 40px;
+  flex-direction: column;
 }
 .lalista {
   display: flex;
+}
+.lista2 {
+  width: 200px;
+  list-style: none;
+  height: 90%;
+  padding: 0;
+  margin-top: 24px;
+}
+.lista2 > li {
+  height: 30px;
 }
 .contiene {
   display: flex;
@@ -66,4 +81,7 @@ header {
 .barrauno {
   width: 100px;
   background-color: antiquewhite;
+}
+li {
+  height: 20px;
 }
