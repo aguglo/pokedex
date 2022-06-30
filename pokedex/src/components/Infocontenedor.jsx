@@ -3,6 +3,8 @@ import "./infocontenedor.css";
 import arrowleft from "../assets/arrow-left.svg";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import LinearProgress from "@mui/material/LinearProgress";
+import StraightenIcon from "@mui/icons-material/Straighten";
+import BalanceIcon from "@mui/icons-material/Balance";
 function Infocontenedor({ info }) {
   if (info) {
     const imagen = require(`../assets/${info.name.toLowerCase()}.png`);
@@ -44,16 +46,17 @@ function Infocontenedor({ info }) {
           <h3 style={{ color: info.color }}>About</h3>
           <div className="informacion">
             <div>
-              img {info.weight} <br />
-              Weight{" "}
+              <BalanceIcon /> {info.weight} <br />
+              Weight
             </div>
             <div>
-              img {info.height} <br />
-              Height{" "}
+              <StraightenIcon /> {info.height} <br />
+              Height
             </div>
             <div>
-              img {info.moves} <br />
-              Move{" "}
+               {info.move1} <br />
+               {info.move2} <br />
+              Move
             </div>
           </div>
           <div className="descripcion">{info.description}</div>
@@ -86,22 +89,44 @@ function Infocontenedor({ info }) {
                         className="span"
                         variant="determinate"
                         value={info.hp}
+                        style={{ backgroundColor: info.color }}
                       />
                     </li>
                     <li>
-                      <LinearProgress variant="determinate" value={info.atk} />
+                      <LinearProgress
+                        variant="determinate"
+                        style={{ backgroundColor: info.color }}
+                        value={info.atk}
+                      />
                     </li>
                     <li>
-                      <LinearProgress variant="determinate" value={info.def} />
+                      <LinearProgress
+                        variant="determinate"
+                        style={{ backgroundColor: info.color }}
+                        value={info.def}
+                      />
                     </li>
                     <li>
-                      <LinearProgress variant="determinate" value={info.satk} />
+                      <LinearProgress
+                        variant="determinate"
+                        style={{ backgroundColor: info.color }}
+                        value={info.satk}
+                      />
                     </li>
                     <li>
-                      <LinearProgress variant="determinate" value={info.sdef} />
+                      <LinearProgress
+                        variant="determinate"
+                        style={{ backgroundColor: info.color }}
+                        value={info.sdef}
+                      />
                     </li>
                     <li>
-                      <LinearProgress variant="determinate" className="holas" value={info.spd} />
+                      <LinearProgress
+                        variant="determinate"
+                        className="holas"
+                        value={info.spd}
+                        style={{ backgroundColor: info.color }}
+                      />
                     </li>
                   </ul>
                 </div>
