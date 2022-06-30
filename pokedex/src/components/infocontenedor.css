@@ -72,6 +72,7 @@ header {
 .lalista {
   display: flex;
   gap: 10px;
+  align-items: center;
 }
 .lista2 {
   width: 300px;
@@ -108,6 +109,49 @@ header {
   padding-top: 40px;
 }
 
+.grass {
+  background-color: #74cb48;
+}
+.poison {
+  background-color: #a43e9e;
+}
+.water {
+  background-color: #6493eb;
+}
 .fire {
-  background-color: red;
+  background-color: #f57d31;
+}
+.bug {
+  background-color: #a7b723;
+}
+.flying {
+  background-color: #a891ec;
+}
+.electric {
+  background-color: #f9cf30;
+}
+.ghost {
+  background-color: #70559b;
+}
+.normal {
+  background-color: #aaa67f;
+}
+.psychic {
+  background-color: #fb5584;
+}
+.steel {
+  background-color: #b789d0;
+}
+.rock {
+  background-color: #b789d0;
+}
+.agustina {
+  display: flex;
+  height: "100%";
+  border-radius: 30px;
+  height: 15px;
+}
+.gus {
+  width: 100%;
+  display: flex;
 }

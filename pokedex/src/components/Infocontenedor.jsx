@@ -56,8 +56,7 @@ function Infocontenedor() {
             Height
           </div>
           <div>
-            {info.move1} <br />
-            {info.move2} <br />
+            {info.moves} <br />
             Move
           </div>
         </div>
@@ -75,10 +74,10 @@ function Infocontenedor() {
                 ([nombreDeLaPropiedad, valorDeLaPropiedad]) => (
                   <li className="lalista">
                     <label>{nombreDeLaPropiedad.toUpperCase()}</label>
-                    <div style={{ width: "100%", display: "flex" }}>
+                    <div className="gus">
                       <div
+                        className="agustina"
                         style={{
-                          height: "100%",
                           backgroundColor: info.color,
                           width: `${valorDeLaPropiedad / 2}%`,
                         }}
