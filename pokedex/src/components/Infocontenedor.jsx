@@ -40,12 +40,9 @@ function Infocontenedor() {
 
       <main className="main">
         <div className="tipos">
-          <span style={{ backgroundColor: info.type1color }} className="tipos">
-            {info.type1}
-          </span>
-          <span style={{ backgroundColor: info.type2color }} className="tipos">
-            {info.type2}
-          </span>
+          {info.types.map((type) => (
+            <span className={`tipos ${type.toLowerCase()}`}>{type}</span>
+          ))}
         </div>
 
         <h3 style={{ color: info.color }}>About</h3>
@@ -68,74 +65,30 @@ function Infocontenedor() {
         <div>
           <h3 style={{ color: info.color }}>Base Stats</h3>
           <div className="contiene">
-            <div className="lalista">
-              <ul className="lista" style={{ color: info.color }}>
-                <li>HP</li>
-                <li>ATK</li>
-                <li>DEF</li>
-                <li>SATK</li>
-                <li>SDEF</li>
-                <li>SPD</li>
-              </ul>
-              <div class="barra">
-                <ul className="lista" style={{ color: info.color }}>
-                  <li>{info.hp}</li>
-                  <li>{info.atk}</li>
-                  <li>{info.def}</li>
-                  <li>{info.satk}</li>
-                  <li>{info.sdef}</li>
-                  <li>{info.spd}</li>
-                </ul>
-              </div>
-              <div class="barra">
-                <ul className="lista2" style={{ color: info.color }}>
-                  <li>
-                    <LinearProgress
-                      className="span"
-                      variant="determinate"
-                      value={info.hp}
-                      style={{ backgroundColor: info.color }}
-                    />
+            <ul className="lista" style={{ color: info.color }}>
+              {/*   
+              Object.entries convierte un objeto en un array de la siguiente manera:
+              suponiendo la variable objetito contetiendo el siguiente objeto: {a:1,b:2} 
+              Object.entries(objetito) retorna [["a",1],["b",2]] 
+              */}
+              {Object.entries(info.stats).map(
+                ([nombreDeLaPropiedad, valorDeLaPropiedad]) => (
+                  <li className="lalista">
+                    <label>{nombreDeLaPropiedad.toUpperCase()}</label>
+                    <div style={{ width: "100%", display: "flex" }}>
+                      <div
+                        style={{
+                          height: "100%",
+                          backgroundColor: info.color,
+                          width: `${valorDeLaPropiedad / 2}%`,
+                        }}
+                      ></div>
+                      <div style={{ flex: "1" }}></div>
+                    </div>
                   </li>
-                  <li>
-                    <LinearProgress
-                      variant="determinate"
-                      style={{ backgroundColor: info.color }}
-                      value={info.atk}
-                    />
-                  </li>
-                  <li>
-                    <LinearProgress
-                      variant="determinate"
-                      style={{ backgroundColor: info.color }}
-                      value={info.def}
-                    />
-                  </li>
-                  <li>
-                    <LinearProgress
-                      variant="determinate"
-                      style={{ backgroundColor: info.color }}
-                      value={info.satk}
-                    />
-                  </li>
-                  <li>
-                    <LinearProgress
-                      variant="determinate"
-                      style={{ backgroundColor: info.color }}
-                      value={info.sdef}
-                    />
-                  </li>
-                  <li>
-                    <LinearProgress
-                      variant="determinate"
-                      className="holas"
-                      value={info.spd}
-                      style={{ backgroundColor: info.color }}
-                    />
-                  </li>
-                </ul>
-              </div>
-            </div>
+                )
+              )}
+            </ul>
           </div>
         </div>
       </main>

@@ -9,6 +9,8 @@ nav {
   display: flex;
   justify-content: space-between;
   gap: 15px;
+
+  align-items: center;
 }
 
 div > header > nav {
@@ -36,6 +38,7 @@ header {
   position: relative;
   height: 200px;
   width: 100%;
+  border-radius: 30px;
 }
 .img {
   display: flex;
@@ -61,11 +64,14 @@ header {
   padding: 0px;
   gap: 10px;
   display: flex;
-  width: 40px;
   flex-direction: column;
+}
+.lalista > label {
+  width: 40px;
 }
 .lalista {
   display: flex;
+  gap: 10px;
 }
 .lista2 {
   width: 300px;
@@ -78,7 +84,6 @@ header {
   height: 30px;
 }
 .contiene {
-  display: flex;
   width: 400px;
 }
 .barrauno {
@@ -101,4 +106,8 @@ header {
   border-radius: 30px;
   margin-bottom: 10px;
   padding-top: 40px;
+}
+
+.fire {
+  background-color: red;
 }

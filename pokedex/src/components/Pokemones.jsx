@@ -34,7 +34,7 @@ function Pokemones() {
     pokemons[0].number === "#001" ? alfabeticamente : numericamente;
   return (
     <>
-      <header>
+      <header className="headerr">
         <div className="header">
           <div className="title">
             <img src={pokeball} alt="logo-pokeball" className="pokeball" />
