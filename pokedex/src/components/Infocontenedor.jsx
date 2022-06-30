@@ -7,14 +7,14 @@ import StraightenIcon from "@mui/icons-material/Straighten";
 import BalanceIcon from "@mui/icons-material/Balance";
 import { useParams } from "react-router-dom";
 import constantepokemons from "../constantes/listapokemones";
+import { Link } from "react-router-dom";
 
 function Infocontenedor() {
   const { nombrePokemon } = useParams();
-
-  const info =(constantepokemons).find((element => element.name))
-
-
-
+  console.log(constantepokemons);
+  const info = constantepokemons.find(
+    (element) => element.name === nombrePokemon
+  );
 
   const imagen = require(`../assets/${info.name.toLowerCase()}.png`);
   return (
@@ -22,7 +22,9 @@ function Infocontenedor() {
       <header style={{ backgroundColor: info.color }}>
         <nav>
           <div className="nav">
-            <img src={arrowleft} />
+            <Link to="/">
+              <img src={arrowleft} />
+            </Link>
             <h1>{info.name}</h1>
           </div>
 

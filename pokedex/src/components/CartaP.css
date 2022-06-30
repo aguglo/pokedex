@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
+  text-decoration: none;
 }
 
 .row {
@@ -12,15 +13,18 @@
   position: relative;
   border-color: red;
 }
-
+a {
+  text-decoration: none;
+}
 .number {
   position: absolute;
   right: 5px;
+  text-decoration: none;
 }
 
 .imagen {
   background-color: white;
-  
+
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }

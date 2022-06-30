@@ -6,7 +6,7 @@ import Contenedor from "./components/Infocontenedor.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { Routes, Route, Link } from "react-router-dom";
 import Infocontenedor from "./components/Infocontenedor.jsx";
-import Probando from "./components/probando";
+
 import { useState } from "react";
 
 function App() {
