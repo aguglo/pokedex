@@ -18,7 +18,7 @@ const pokemons = [
     number: "#001",
     color: "#74CB48",
     description:
-      "There isaplant seed on its back right from the day this Pokémon is born.The seed slowly grows larger",
+      "There is a plant seed on it's back right from the day this Pokémon is born. The seed slowly grows larger",
   },
 
   {
@@ -41,7 +41,7 @@ const pokemons = [
     type1color: "#F57D31",
     type2color: "",
     description:
-      "The flame on its tail shows the strength of its life force. If it is weak, the flame also burns weakly",
+      "The flame on it's tail shows the strength of it's life force. If it is weak, the flame also burns weakly",
   },
 
   {
@@ -63,7 +63,7 @@ const pokemons = [
     type1color: "#6493EB",
     type2color: "",
     description:
-      "Shoots water at prey while in the water. Withdraws into its shell when in danger",
+      "Shoots water at prey while in the water. Withdraws into it's shell when in danger",
   },
   {
     name: "ButterFree",
@@ -84,7 +84,7 @@ const pokemons = [
     type1color: "#A7B723",
     type2color: "#A891EC",
     description:
-      "In battle, it flaps its wings at high speed to release highly toxic dust into the air",
+      "In battle, it flaps it's wings at high speed to release highly toxic dust into the air",
   },
   {
     name: "Pikachu",
@@ -105,7 +105,7 @@ const pokemons = [
     type1color: "#F9CF30",
     type2color: "",
     description:
-      "It keeps its tail raised to monitor its surroundings. If you yank its tail, it will try to bite you",
+      "It keeps it's tail raised to monitor its surroundings. If you yank it's tail, it will try to bite you",
   },
   {
     name: "Gastly",

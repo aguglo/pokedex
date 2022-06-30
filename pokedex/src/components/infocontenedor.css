@@ -164,4 +164,9 @@ header {
  position: absolute;
 }
 
+.descripcion{
+  text-align: center;
+  margin: 5px;
+}
+
 

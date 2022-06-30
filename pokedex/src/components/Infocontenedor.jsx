@@ -62,6 +62,7 @@ function Infocontenedor() {
             Move
           </div>
         </div>
+        <br />
         <div className="descripcion">{info.description}</div>
         <div>
           <h3 style={{ color: info.color }}>Base Stats</h3>
