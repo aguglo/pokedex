@@ -11,7 +11,10 @@ import constantepokemons from "../constantes/listapokemones";
 function Infocontenedor() {
   const { nombrePokemon } = useParams();
 
-  const info = {};
+  const info =(constantepokemons).find((element => element.name))
+
+
+
 
   const imagen = require(`../assets/${info.name.toLowerCase()}.png`);
   return (
