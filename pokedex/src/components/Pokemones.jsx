@@ -3,11 +3,12 @@ import Pokemon from "./CartaP";
 import constantepokemons from "../constantes/listapokemones";
 import React, { useState } from "react";
 import Infocontenedor from "./Infocontenedor";
+import { Link } from "react-router-dom";
 
 import pokeball from "../assets/Pokeball.png";
 import arrow from "../assets/Arrow.svg";
 
-function Pokemones() {
+function Pokemones({ setpokemon }) {
   const [pokemons, setpokemons] = useState(constantepokemons);
 
   const filtrado = (evento) => {
@@ -64,17 +65,17 @@ function Pokemones() {
         {
           <div className="container">
             {pokemons.map((pokemon) => (
-              <Pokemon key={pokemon.name} pokemon={pokemon} />
+              <Link to="/contenedor">
+                <Pokemon
+                  key={pokemon.name}
+                  pokemon={pokemon}
+                  setpokemon={setpokemon}
+                />
+              </Link>
             ))}
           </div>
         }
       </main>
-
-      <div className="contenedor">
-        {pokemons.map((info) => (
-          <Infocontenedor key={info.number} info={info} />
-        ))}
-      </div>
     </>
   );
 }

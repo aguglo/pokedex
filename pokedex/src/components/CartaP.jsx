@@ -1,5 +1,5 @@
 import "./CartaP.css";
-function Pokemon({ pokemon }) {
+function Pokemon({ pokemon, setpokemon }) {
   const imagen = require(`../assets/${pokemon.name.toLowerCase()}.png`);
   const click = (clic) => {
     console.log("hola");
@@ -10,7 +10,12 @@ function Pokemon({ pokemon }) {
         <span style={{ color: pokemon.color }} className="number">
           {pokemon.number}
         </span>
-        <img className="imagen" onClick={click} src={imagen} alt="" />
+        <img
+          className="imagen"
+          onClick={setpokemon(pokemon)}
+          src={imagen}
+          alt=""
+        />
         <h1 className="nombre">{pokemon.name}</h1>
       </div>
     </div>
