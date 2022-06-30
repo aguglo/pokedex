@@ -2,7 +2,9 @@ nav {
   display: flex;
   justify-content: space-between;
 }
-
+.contenedor{
+  margin-top: 40px;
+}
 .nav {
   display: flex;
   justify-content: space-between;
@@ -28,7 +30,7 @@ h3 {
   flex-direction: column;
   align-items: center;
   gap: 50px;
-  height: 700px;
+  height: 730px;
 }
 header {
   position: relative;
@@ -66,22 +68,30 @@ header {
   display: flex;
 }
 .lista2 {
-  width: 200px;
+  width: 300px;
   list-style: none;
   height: 90%;
   padding: 0;
-  margin-top: 24px;
+  margin-top: 20px;
 }
 .lista2 > li {
   height: 30px;
 }
 .contiene {
   display: flex;
+  width: 400px;
 }
 .barrauno {
   width: 100px;
   background-color: antiquewhite;
 }
-li {
-  height: 20px;
+
+.css-eglki6-MuiLinearProgress-root {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  height: 10px !important ;
+  border-radius: 20px;
+  z-index: 0;
+  background-color: rgb(167, 202, 237);
 }
