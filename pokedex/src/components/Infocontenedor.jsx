@@ -9,7 +9,7 @@ function Infocontenedor({ info }) {
   if (info) {
     const imagen = require(`../assets/${info.name.toLowerCase()}.png`);
     return (
-      <div className="div">
+      <div style={{ backgroundColor: info.type1color }} className="div">
         <header style={{ backgroundColor: info.color }}>
           <nav>
             <div className="nav">
@@ -54,8 +54,8 @@ function Infocontenedor({ info }) {
               Height
             </div>
             <div>
-               {info.move1} <br />
-               {info.move2} <br />
+              {info.move1} <br />
+              {info.move2} <br />
               Move
             </div>
           </div>
@@ -136,6 +136,8 @@ function Infocontenedor({ info }) {
         </main>
       </div>
     );
+  } else {
+    return <h1>hola</h1>;
   }
   //
   return null;

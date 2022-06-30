@@ -57,6 +57,8 @@ const pokemons = [
     satk: "50",
     sdef: "64",
     moves: "torrent,rain-dish",
+    move1: "torrent",
+    move2: "rain-dish",
     type1: "Water",
     type2: "",
     number: "#007",

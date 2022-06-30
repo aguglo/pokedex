@@ -2,7 +2,7 @@ nav {
   display: flex;
   justify-content: space-between;
 }
-.contenedor{
+.contenedor {
   margin-top: 40px;
 }
 .nav {
@@ -94,4 +94,11 @@ header {
   border-radius: 20px;
   z-index: 0;
   background-color: rgb(167, 202, 237);
+}
+.main {
+  width: 95%;
+  background-color: white;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  padding-top: 40px;
 }

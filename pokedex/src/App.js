@@ -1,14 +1,21 @@
 import "./App.css";
 
 import Pokemones from "./components/Pokemones";
-import pokemons from "../src/constantes/listapokemones";
-import Contenedor from "./components/Infocontenedor.jsx";
 
+import Contenedor from "./components/Infocontenedor.jsx";
+import { BrowserRouter } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
+import Infocontenedor from "./components/Infocontenedor.jsx";
+import Probando from "./components/probando";
 function App() {
   return (
     <div className="App">
-      <Pokemones />
-      <Contenedor />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Pokemones />} />
+          <Route path="/contenedor" element={<Infocontenedor />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
