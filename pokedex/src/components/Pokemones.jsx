@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import pokeball from "../assets/Pokeball.png";
 import arrow from "../assets/Arrow.svg";
 
-function Pokemones({ setpokemon }) {
+function Pokemones() {
   const [pokemons, setpokemons] = useState(constantepokemons);
 
   const filtrado = (evento) => {
@@ -65,13 +65,7 @@ function Pokemones({ setpokemon }) {
         {
           <div className="container">
             {pokemons.map((pokemon) => (
-              <Link to="/contenedor">
-                <Pokemon
-                  key={pokemon.name}
-                  pokemon={pokemon}
-                  setpokemon={setpokemon}
-                />
-              </Link>
+              <Pokemon key={pokemon.name} pokemon={pokemon} />
             ))}
           </div>
         }

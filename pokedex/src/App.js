@@ -10,16 +10,14 @@ import Probando from "./components/probando";
 import { useState } from "react";
 
 function App() {
-  const [pokemon, setpokemon] = useState();
-
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Pokemones setpokemon={setpokemon} />} />
+          <Route path="/" element={<Pokemones />} />
           <Route
-            path="contenedor"
-            element={<Infocontenedor pokemon={pokemon} />}
+            path="contenedor/:nombrePokemon"
+            element={<Infocontenedor />}
           />
         </Routes>
       </BrowserRouter>

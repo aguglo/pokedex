@@ -5,9 +5,14 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import LinearProgress from "@mui/material/LinearProgress";
 import StraightenIcon from "@mui/icons-material/Straighten";
 import BalanceIcon from "@mui/icons-material/Balance";
+import { useParams } from "react-router-dom";
+import constantepokemons from "../constantes/listapokemones";
 
-function Infocontenedor({ info }) {
-  console.log({ info });
+function Infocontenedor() {
+  const { nombrePokemon } = useParams();
+
+  const info = {};
+
   const imagen = require(`../assets/${info.name.toLowerCase()}.png`);
   return (
     <div style={{ backgroundColor: info.type1color }} className="div">
