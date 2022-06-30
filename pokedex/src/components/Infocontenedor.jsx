@@ -8,6 +8,7 @@ import BalanceIcon from "@mui/icons-material/Balance";
 import { useParams } from "react-router-dom";
 import constantepokemons from "../constantes/listapokemones";
 import { Link } from "react-router-dom";
+import pokeball from "../assets/Pokeball.png"
 
 function Infocontenedor() {
   const { nombrePokemon } = useParams();
@@ -20,6 +21,7 @@ function Infocontenedor() {
   return (
     <div style={{ backgroundColor: info.type1color }} className="div">
       <header style={{ backgroundColor: info.color }}>
+        <img  className= "pokebola" src={pokeball} />
         <nav>
           <div className="nav">
             <Link to="/">
