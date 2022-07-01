@@ -22,10 +22,7 @@ div > header > nav {
 }
 
 .number{
-  margin-right: 7px;
-  font-family: "Bold", sans-serif;
-  font-weight: 500;
-  margin-top: 27px;
+  
 }
 .tipos {
   display: flex;
@@ -91,10 +88,12 @@ header {
   font-family: "Bold", sans-serif;
   font-weight: 400;
 }
-.numeros{
-  color: black;
-  
-  font-weight: 800;
+.number2{
+  color: white;   
+  margin-right: 7px;
+  font-family: "Bold", sans-serif;
+  font-weight: 500;
+  margin-top: 27px;
 }
 .lalista {
   display: flex;

@@ -41,7 +41,7 @@ function Infocontenedor() {
             <h1>{info.name}</h1>
           </div>
 
-          <p className="number">{info.number}</p>
+          <p className="number2">{info.number}</p>
         </nav>
         <div className="img">
           <img className="imageni" src={imagen} alt="" />
