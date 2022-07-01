@@ -42,7 +42,11 @@ function Pokemones() {
           </div>
 
           <div className="title2">
-            <span>#</span>
+            <span className="az">
+              {" "}
+              <span>A</span>
+              <span>Z</span>
+            </span>
             <img
               onClick={funcionDeOrdenado}
               src={arrow}

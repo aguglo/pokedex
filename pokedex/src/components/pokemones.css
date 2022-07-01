@@ -20,12 +20,16 @@
 .flecha {
   height: 30px;
 
-cursor: url(https://cur.cursors-4u.net/games/gam-13/gam1294.cur), auto !important;
+  cursor: url(https://cur.cursors-4u.net/games/gam-13/gam1294.cur), auto !important;
 }
 
 .title2 {
   display: flex;
   align-items: center;
+}
+.az {
+  display: flex;
+  flex-direction: column;
 }
 
 input {
@@ -42,4 +46,8 @@ input {
 }
 .headerr {
   height: 100px;
+}
+h1 {
+  font-family: "Bold", sans-serif;
+  font-weight: 800;
 }

@@ -45,9 +45,9 @@ function Infocontenedor() {
         <div className="img">
           <img className="imageni" src={imagen} alt="" />
           {anteriorPokemon ? (
-            <p>
+            <p >
               <Link to={`/contenedor/${anteriorPokemon.name}`}>
-                <ArrowBackIosIcon />
+                <ArrowBackIosIcon className="anterior" />
               </Link>
             </p>
           ) : null}
@@ -56,7 +56,7 @@ function Infocontenedor() {
               <p></p>
               <p>
                 <Link to={`/contenedor/${siguientePokemon.name}`}>
-                  <ArrowForwardIosIcon />
+                  <ArrowForwardIosIcon className="siguiente" />
                 </Link>
               </p>
             </>

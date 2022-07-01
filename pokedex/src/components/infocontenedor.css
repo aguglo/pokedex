@@ -1,5 +1,5 @@
 * {
-  cursor: url(https://cur.cursors-4u.net/games/gam-13/gam1282.cur), auto;
+  cursor: url(https://cur.cursors-4u.net/holidays/hol-5/hol445.gif), auto !important;
 }
 nav {
   display: flex;
@@ -174,4 +174,11 @@ header {
 .descripcion {
   text-align: center;
   margin: 5px;
+}
+.siguiente {
+  cursor: url(https://cur.cursors-4u.net/games/gam-13/gam1238.ani),
+    url(https://cur.cursors-4u.net/games/gam-13/gam1238.png), auto !important;
+}
+.anterior {
+  cursor: url(https://cur.cursors-4u.net/games/gam-13/gam1280.cur), auto !important;
 }

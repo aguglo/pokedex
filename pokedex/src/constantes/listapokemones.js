@@ -1,5 +1,4 @@
 const pokemons = [
-
   {
     name: "Bulbasaur",
     height: "0,7m",
@@ -18,6 +17,8 @@ const pokemons = [
     type2color: "#A43E9E",
     number: "#001",
     color: "#74CB48",
+    cursor:
+      " url(https://cur.cursors-4u.net/games/gam-7/gam648.cur), auto !important;",
     description:
       "There is a plant seed on it's back right from the day this Pokémon is born. The seed slowly grows larger",
   },
@@ -41,6 +42,8 @@ const pokemons = [
     color: "#F57D31",
     type1color: "#F57D31",
     type2color: "",
+    cursor:
+      " url(https://cur.cursors-4u.net/games/gam-7/gam648.cur), auto !important;",
     description:
       "The flame on it's tail shows the strength of it's life force. If it is weak, the flame also burns weakly",
   },
@@ -63,6 +66,8 @@ const pokemons = [
     color: "#6493EB",
     type1color: "#6493EB",
     type2color: "",
+    cursor:
+      " url(https://cur.cursors-4u.net/games/gam-7/gam648.cur), auto !important;",
     description:
       "Shoots water at prey while in the water. Withdraws into it's shell when in danger",
   },
@@ -84,6 +89,8 @@ const pokemons = [
     color: "#A7B723",
     type1color: "#A7B723",
     type2color: "#A891EC",
+    cursor:
+      " url(https://cur.cursors-4u.net/games/gam-7/gam648.cur), auto !important;",
     description:
       "In battle, it flaps it's wings at high speed to release highly toxic dust into the air",
   },
@@ -105,6 +112,8 @@ const pokemons = [
     color: "#F9CF30",
     type1color: "#F9CF30",
     type2color: "",
+    cursor:
+      " url(https://cur.cursors-4u.net/games/gam-7/gam648.cur), auto !important;",
     description:
       "It keeps it's tail raised to monitor its surroundings. If you yank it's tail, it will try to bite you",
   },
@@ -125,6 +134,8 @@ const pokemons = [
     color: "#70559B",
     type1color: "#70559B",
     type2color: "#A43E9E",
+    cursor:
+      " url(https://cur.cursors-4u.net/games/gam-7/gam648.cur), auto !important;",
     description:
       "Almost invisible, this gaseous POKéMON cloaks the target and puts it to sleep without notice.",
     number: "#082",
@@ -146,6 +157,8 @@ const pokemons = [
     color: "#AAA67F",
     type1color: "#AAA67F",
     type2color: "",
+    cursor:
+      " url(https://cur.cursors-4u.net/games/gam-7/gam648.cur), auto !important;",
     description:
       "Capable of copying an enemy's genetic code to instantly transform itself into a duplicate of the enemy.",
     number: "#132",
@@ -167,6 +180,8 @@ const pokemons = [
     color: "#FB5584",
     type1color: "#FB5584",
     type2color: "",
+    cursor:
+      " url(https://cur.cursors-4u.net/games/gam-7/gam648.cur), auto !important;",
     description:
       "So rare that it is still said to be a mirage by many experts. Only a few people have seen it worldwide.",
     number: "#182",
@@ -188,10 +203,11 @@ const pokemons = [
     color: "#B789D0",
     type1color: "#B789D0",
     type2color: "#B69E31",
+    cursor:
+      " url(https://cur.cursors-4u.net/games/gam-7/gam648.cur), auto !important;",
     description:
       "This POKéMON has a body of steel. To make its body, ARON feeds on iron ore that it digs from mountains. Occasionally, it causes major trouble by eating bridges and rails.",
     number: "#304",
   },
- 
 ];
 export default pokemons;
