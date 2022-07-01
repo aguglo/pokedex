@@ -17,10 +17,12 @@ function Infocontenedor() {
   const info = constantepokemons.find(
     (element) => element.name === nombrePokemon
   );
-  const nexpokemon = constantepokemons.findIndex(
-    (element) => element.index === nombrePokemon
+  const nextpokemon = constantepokemons.findIndex(
+    (element) => element.name === nombrePokemon
   );
-  console.log({ nexpokemon });
+  const siguientePokemon = constantepokemons[nextpokemon + 1];
+  // const anteriorPokemon = constantepokemons[nextpokemon - 1];
+
   const imagen = require(`../assets/${info.name.toLowerCase()}.png`);
   return (
     <div style={{ backgroundColor: info.type1color }} className="div">
@@ -39,10 +41,13 @@ function Infocontenedor() {
         <div className="img">
           <img className="imageni" src={imagen} alt="" />
           <p>
+            {/* <Link to={`/contenedor/${anteriorPokemon.name}`}> */}
             <ArrowBackIosIcon />
+            {/* </Link> */}
           </p>
+
           <p>
-            <Link to="/{nexpokemon}">
+            <Link to={`/contenedor/${siguientePokemon.name}`}>
               <ArrowForwardIosIcon />
             </Link>
           </p>
