@@ -10,6 +10,7 @@ import constantepokemons from "../constantes/listapokemones";
 import { Link } from "react-router-dom";
 import pokeball from "../assets/Pokeball.png";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import { fontWeight } from "@mui/system";
 
 function Infocontenedor() {
   const { nombrePokemon } = useParams();
@@ -35,12 +36,12 @@ function Infocontenedor() {
         <nav>
           <div className="nav">
             <Link to="/">
-              <img src={arrowleft} />
+              <img className="flechita" src={arrowleft} />
             </Link>
             <h1>{info.name}</h1>
           </div>
 
-          <p>{info.number}</p>
+          <p className="number">{info.number}</p>
         </nav>
         <div className="img">
           <img className="imageni" src={imagen} alt="" />
@@ -71,37 +72,35 @@ function Infocontenedor() {
           ))}
         </div>
 
-        <h3 style={{ color: info.color }}>About</h3>
+        <h3 className= "about" style={{ color: info.color}}>About</h3>
         <div className="informacion">
           <div>
             <BalanceIcon /> {info.weight} <br />
             Weight
           </div>
-          <div>
+          <div className="peso">
             <StraightenIcon /> {info.height} <br />
             Height
           </div>
-          <div>
-            {info.moves} <br />
+          <div className="moves">
+            {info.moves.map((move) => (
+              <p className="movimientos">{move}</p>             
+            )) }
             Move
           </div>
         </div>
         <br />
         <div className="descripcion">{info.description}</div>
         <div>
-          <h3 style={{ color: info.color }}>Base Stats</h3>
+          <h3 className="baseStats" style={{ color: info.color }}>Base Stats</h3>
           <div className="contiene">
             <ul className="lista" style={{ color: info.color }}>
-              {/*   
-              Object.entries convierte un objeto en un array de la siguiente manera:
-              suponiendo la variable objetito contetiendo el siguiente objeto: {a:1,b:2} 
-              Object.entries(objetito) retorna [["a",1],["b",2]] 
-              */}
+             
               {Object.entries(info.stats).map(
                 ([nombreDeLaPropiedad, valorDeLaPropiedad]) => (
                   <li className="lalista">
-                    <label>{nombreDeLaPropiedad.toUpperCase()}</label>
-                    <label>{valorDeLaPropiedad}</label>
+                    <label className="nombres">{nombreDeLaPropiedad.toUpperCase()}</label>
+                    <label className="numeros">{valorDeLaPropiedad}</label>
                     <div className="gus">
                       <div
                         className="agustina"

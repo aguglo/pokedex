@@ -60,8 +60,9 @@ function Pokemones() {
             onChange={filtrado}
             type="text"
             name=""
-            id=""
+            id="jeje"
             placeholder="Buscar"
+            
           />
         </div>
       </header>

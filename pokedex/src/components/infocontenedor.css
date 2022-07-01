@@ -1,5 +1,7 @@
 * {
   cursor: url(https://cur.cursors-4u.net/holidays/hol-5/hol445.gif), auto !important;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
 }
 nav {
   display: flex;
@@ -18,6 +20,13 @@ nav {
 div > header > nav {
   color: white;
 }
+
+.number{
+  margin-right: 7px;
+  font-family: "Bold", sans-serif;
+  font-weight: 500;
+  margin-top: 27px;
+}
 .tipos {
   display: flex;
   gap: 40px;
@@ -35,7 +44,7 @@ h3 {
   align-items: center;
   gap: 50px;
   height: 100%;
-  border-radius: 30px;
+  border-radius: 20px;
 }
 header {
   position: relative;
@@ -53,7 +62,7 @@ header {
 .imageni {
   position: absolute;
   left: 160px;
-  top: 60px;
+  top: 80px;
   height: 240px;
 }
 
@@ -75,11 +84,24 @@ header {
 }
 .lalista > label {
   width: 40px;
+   
+}
+
+.nombres{
+  font-family: "Bold", sans-serif;
+  font-weight: 400;
+}
+.numeros{
+  color: black;
+  
+  font-weight: 800;
 }
 .lalista {
   display: flex;
   gap: 10px;
   align-items: center;
+  
+  
 }
 .lista2 {
   width: 300px;
@@ -99,19 +121,10 @@ header {
   background-color: antiquewhite;
 }
 
-.css-eglki6-MuiLinearProgress-root {
-  position: relative;
-  overflow: hidden;
-  display: block;
-  height: 10px !important ;
-  border-radius: 20px;
-  z-index: 0;
-  background-color: rgb(167, 202, 237);
-}
 .main {
-  width: 95%;
+  width: 97%;
   background-color: white;
-  border-radius: 30px;
+  border-radius: 20px;
   margin-bottom: 10px;
   padding-top: 40px;
 }
@@ -181,4 +194,28 @@ header {
 }
 .anterior {
   cursor: url(https://cur.cursors-4u.net/games/gam-13/gam1280.cur), auto !important;
+}
+
+.movimientos{
+  margin: 1px;
+}
+
+.moves{
+  margin-top: -16.5px;
+}
+
+.flechita{
+  filter: invert();
+  margin-top: 10px;
+  margin-left: 25px;
+}
+
+.about{
+  font-family: "Bold", sans-serif;
+  font-weight: 800;
+}
+
+.baseStats{
+  font-family: "Bold", sans-serif;
+  font-weight: 800;
 }
