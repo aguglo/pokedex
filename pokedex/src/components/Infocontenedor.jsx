@@ -2,13 +2,14 @@ import React from "react";
 import "./infocontenedor.css";
 import arrowleft from "../assets/arrow-left.svg";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import LinearProgress from "@mui/material/LinearProgress";
+
 import StraightenIcon from "@mui/icons-material/Straighten";
 import BalanceIcon from "@mui/icons-material/Balance";
 import { useParams } from "react-router-dom";
 import constantepokemons from "../constantes/listapokemones";
 import { Link } from "react-router-dom";
-import pokeball from "../assets/Pokeball.png"
+import pokeball from "../assets/Pokeball.png";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
 function Infocontenedor() {
   const { nombrePokemon } = useParams();
@@ -16,12 +17,15 @@ function Infocontenedor() {
   const info = constantepokemons.find(
     (element) => element.name === nombrePokemon
   );
-
+  const nexpokemon = constantepokemons.findIndex(
+    (element) => element.index === nombrePokemon
+  );
+  console.log({ nexpokemon });
   const imagen = require(`../assets/${info.name.toLowerCase()}.png`);
   return (
     <div style={{ backgroundColor: info.type1color }} className="div">
       <header style={{ backgroundColor: info.color }}>
-        <img  className= "pokebola" src={pokeball} />
+        <img className="pokebola" src={pokeball} />
         <nav>
           <div className="nav">
             <Link to="/">
@@ -35,7 +39,12 @@ function Infocontenedor() {
         <div className="img">
           <img className="imageni" src={imagen} alt="" />
           <p>
-            <ArrowForwardIosIcon />
+            <ArrowBackIosIcon />
+          </p>
+          <p>
+            <Link to="/{nexpokemon}">
+              <ArrowForwardIosIcon />
+            </Link>
           </p>
         </div>
       </header>
@@ -77,6 +86,7 @@ function Infocontenedor() {
                 ([nombreDeLaPropiedad, valorDeLaPropiedad]) => (
                   <li className="lalista">
                     <label>{nombreDeLaPropiedad.toUpperCase()}</label>
+                    <label>{valorDeLaPropiedad}</label>
                     <div className="gus">
                       <div
                         className="agustina"
