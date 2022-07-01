@@ -2,9 +2,7 @@ import { Link } from "react-router-dom";
 import "./CartaP.css";
 function Pokemon({ pokemon }) {
   const imagen = require(`../assets/${pokemon.name.toLowerCase()}.png`);
-  const click = (clic) => {
-    console.log("hola");
-  };
+  
   return (
     <Link to={`/contenedor/${pokemon.name}`}>
       <div className="container">

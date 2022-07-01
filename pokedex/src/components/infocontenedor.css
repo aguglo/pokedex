@@ -1,3 +1,6 @@
+* {
+  cursor: url(https://cur.cursors-4u.net/games/gam-13/gam1282.cur), auto;
+}
 nav {
   display: flex;
   justify-content: space-between;
@@ -161,11 +164,11 @@ header {
 }
 
 .pokebola {
-  z-index: 0;
   opacity: 30%;
   left: 45%;
   filter: invert();
   position: absolute;
+  width: 249px;
 }
 
 .descripcion {
