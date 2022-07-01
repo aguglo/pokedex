@@ -13,15 +13,19 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
 function Infocontenedor() {
   const { nombrePokemon } = useParams();
-  console.log(constantepokemons);
+
   const info = constantepokemons.find(
     (element) => element.name === nombrePokemon
   );
   const nextpokemon = constantepokemons.findIndex(
     (element) => element.name === nombrePokemon
   );
-  const siguientePokemon = constantepokemons[nextpokemon + 1];
-  // const anteriorPokemon = constantepokemons[nextpokemon - 1];
+
+  const siguientePokemon =
+    nextpokemon !== 8 ? constantepokemons[nextpokemon + 1] : null;
+
+  const anteriorPokemon =
+    nextpokemon !== 0 ? constantepokemons[nextpokemon - 1] : null;
 
   const imagen = require(`../assets/${info.name.toLowerCase()}.png`);
   return (
@@ -40,17 +44,23 @@ function Infocontenedor() {
         </nav>
         <div className="img">
           <img className="imageni" src={imagen} alt="" />
-          <p>
-            {/* <Link to={`/contenedor/${anteriorPokemon.name}`}> */}
-            <ArrowBackIosIcon />
-            {/* </Link> */}
-          </p>
-
-          <p>
-            <Link to={`/contenedor/${siguientePokemon.name}`}>
-              <ArrowForwardIosIcon />
-            </Link>
-          </p>
+          {anteriorPokemon ? (
+            <p>
+              <Link to={`/contenedor/${anteriorPokemon.name}`}>
+                <ArrowBackIosIcon />
+              </Link>
+            </p>
+          ) : null}
+          {siguientePokemon ? (
+            <>
+              <p></p>
+              <p>
+                <Link to={`/contenedor/${siguientePokemon.name}`}>
+                  <ArrowForwardIosIcon />
+                </Link>
+              </p>
+            </>
+          ) : null}
         </div>
       </header>
 

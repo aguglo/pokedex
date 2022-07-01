@@ -1,4 +1,5 @@
 const pokemons = [
+
   {
     name: "Bulbasaur",
     height: "0,7m",
@@ -191,5 +192,6 @@ const pokemons = [
       "This POKéMON has a body of steel. To make its body, ARON feeds on iron ore that it digs from mountains. Occasionally, it causes major trouble by eating bridges and rails.",
     number: "#304",
   },
+ 
 ];
 export default pokemons;

@@ -18,13 +18,13 @@ function Pokemones() {
     setpokemons(nuevoFiltrado);
   };
 
-  const alfabeticamente = (nuevopokemons) => {
+  const alfabeticamente = () => {
     const listaNueva = [...pokemons].sort((a, z) =>
       a.name.localeCompare(z.name)
     );
     setpokemons(listaNueva);
   };
-  const numericamente = (nuevopokemonsN) => {
+  const numericamente = () => {
     const listanumerica = [...pokemons].sort((a, z) =>
       a.number.localeCompare(z.number)
     );
@@ -62,13 +62,13 @@ function Pokemones() {
         </div>
       </header>
       <main>
-        {
+        {pokemons ? (
           <div className="container">
             {pokemons.map((pokemon) => (
               <Pokemon key={pokemon.name} pokemon={pokemon} />
             ))}
           </div>
-        }
+        ) : null}
       </main>
     </>
   );
