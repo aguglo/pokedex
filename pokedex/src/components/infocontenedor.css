@@ -21,8 +21,7 @@ div > header > nav {
   color: white;
 }
 
-.number{
-  
+.number {
 }
 .tipos {
   display: flex;
@@ -81,15 +80,14 @@ header {
 }
 .lalista > label {
   width: 40px;
-   
 }
 
-.nombres{
+.nombres {
   font-family: "Bold", sans-serif;
   font-weight: 400;
 }
-.number2{
-  color: white;   
+.number2 {
+  color: white;
   margin-right: 7px;
   font-family: "Bold", sans-serif;
   font-weight: 500;
@@ -99,8 +97,6 @@ header {
   display: flex;
   gap: 10px;
   align-items: center;
-  
-  
 }
 .lista2 {
   width: 300px;
@@ -168,11 +164,12 @@ header {
   display: flex;
   height: "100%";
   border-radius: 30px;
-  height: 15px;
+  height: 5px;
 }
 .gus {
   width: 100%;
   display: flex;
+  background-color: aliceblue;
 }
 
 .pokebola {
@@ -195,26 +192,26 @@ header {
   cursor: url(https://cur.cursors-4u.net/games/gam-13/gam1280.cur), auto !important;
 }
 
-.movimientos{
+.movimientos {
   margin: 1px;
 }
 
-.moves{
+.moves {
   margin-top: -16.5px;
 }
 
-.flechita{
+.flechita {
   filter: invert();
   margin-top: 10px;
   margin-left: 25px;
 }
 
-.about{
+.about {
   font-family: "Bold", sans-serif;
   font-weight: 800;
 }
 
-.baseStats{
+.baseStats {
   font-family: "Bold", sans-serif;
   font-weight: 800;
 }
