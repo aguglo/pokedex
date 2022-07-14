@@ -10,7 +10,6 @@ import constantepokemons from "../constantes/listapokemones";
 import { Link } from "react-router-dom";
 import pokeball from "../assets/Pokeball.png";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import { fontWeight } from "@mui/system";
 
 function Infocontenedor() {
   const { nombrePokemon } = useParams();

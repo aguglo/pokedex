@@ -21,8 +21,7 @@ div > header > nav {
   color: white;
 }
 
-.number {
-}
+
 .tipos {
   display: flex;
   gap: 40px;

@@ -1,37 +1,54 @@
 import "./pokemones.css";
 import Pokemon from "./CartaP";
-import constantepokemons from "../constantes/listapokemones";
 import React, { useState } from "react";
-import Infocontenedor from "./Infocontenedor";
-import { Link } from "react-router-dom";
-
 import pokeball from "../assets/Pokeball.png";
 import arrow from "../assets/Arrow.svg";
+import { useEffect } from "react";
 
 function Pokemones() {
-  const [pokemons, setpokemons] = useState(constantepokemons);
+  const [pokemon, setpokemon] = useState([]);
+  const [pokemons, setpokemons] = useState([]);
+
+  useEffect(() => {
+    cargarPokemon();
+  }, []);
+
+  const cargarPokemon = async () => {
+    try {
+      const respuesta = await fetch("http://localhost:3010/pokemones");
+      if (!respuesta.ok) {
+        throw new Error("Error en el servidor");
+      }
+      const pokemonFetch = await respuesta.json();
+      setpokemon(pokemonFetch);
+      setpokemons(pokemonFetch);
+    } catch (error) {
+      console.log("No se pudo conectar con el back end");
+    }
+  };
 
   const filtrado = (evento) => {
-    const nuevoFiltrado = [...constantepokemons].filter((element) =>
+    const nuevoFiltrado = [...pokemon].filter((element) =>
       element.name.toLowerCase().includes(evento.target.value.toLowerCase())
     );
     setpokemons(nuevoFiltrado);
   };
 
   const alfabeticamente = () => {
-    const listaNueva = [...pokemons].sort((a, z) =>
+    const listaNueva = [...pokemon].sort((a, z) =>
       a.name.localeCompare(z.name)
     );
     setpokemons(listaNueva);
   };
   const numericamente = () => {
-    const listanumerica = [...pokemons].sort((a, z) =>
+    const listanumerica = [...pokemon].sort((a, z) =>
       a.number.localeCompare(z.number)
     );
     setpokemons(listanumerica);
   };
-  const funcionDeOrdenado =
-    pokemons[0].number === "#001" ? alfabeticamente : numericamente;
+  const funcionDeOrdenado = () => {
+    pokemons[0].number === "001" ? alfabeticamente() : numericamente();
+  };
   return (
     <>
       <header className="headerr">
@@ -62,7 +79,6 @@ function Pokemones() {
             name=""
             id="jeje"
             placeholder="Buscar"
-            
           />
         </div>
       </header>
