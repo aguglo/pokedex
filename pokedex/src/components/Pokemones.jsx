@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import pokeball from "../assets/Pokeball.png";
 import arrow from "../assets/Arrow.svg";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function Pokemones() {
   const [pokemon, setpokemon] = useState([]);
@@ -15,7 +16,9 @@ function Pokemones() {
 
   const cargarPokemon = async () => {
     try {
-      const respuesta = await fetch("http://localhost:3010/pokemones");
+      const respuesta = await fetch("http://localhost:3010/pokemones", {
+        headers: { "auth-token": localStorage.token },
+      });
       if (!respuesta.ok) {
         throw new Error("Error en el servidor");
       }
@@ -56,6 +59,9 @@ function Pokemones() {
           <div className="title">
             <img src={pokeball} alt="logo-pokeball" className="pokeball" />
             <h1>Pokédex</h1>
+            <Link to="/login">
+              <button>Login</button>
+            </Link>
           </div>
 
           <div className="title2">
