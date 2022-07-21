@@ -45,7 +45,7 @@ function Infocontenedor() {
         <div className="img">
           <img className="imageni" src={imagen} alt="" />
           {anteriorPokemon ? (
-            <p >
+            <p>
               <Link to={`/contenedor/${anteriorPokemon.name}`}>
                 <ArrowBackIosIcon className="anterior" />
               </Link>
@@ -71,7 +71,9 @@ function Infocontenedor() {
           ))}
         </div>
 
-        <h3 className= "about" style={{ color: info.color}}>About</h3>
+        <h3 className="about" style={{ color: info.color }}>
+          About
+        </h3>
         <div className="informacion">
           <div>
             <BalanceIcon /> {info.weight} <br />
@@ -83,22 +85,25 @@ function Infocontenedor() {
           </div>
           <div className="moves">
             {info.moves.map((move) => (
-              <p className="movimientos">{move}</p>             
-            )) }
+              <p className="movimientos">{move}</p>
+            ))}
             Move
           </div>
         </div>
         <br />
         <div className="descripcion">{info.description}</div>
         <div>
-          <h3 className="baseStats" style={{ color: info.color }}>Base Stats</h3>
+          <h3 className="baseStats" style={{ color: info.color }}>
+            Base Stats
+          </h3>
           <div className="contiene">
             <ul className="lista" style={{ color: info.color }}>
-             
               {Object.entries(info.stats).map(
                 ([nombreDeLaPropiedad, valorDeLaPropiedad]) => (
                   <li className="lalista">
-                    <label className="nombres">{nombreDeLaPropiedad.toUpperCase()}</label>
+                    <label className="nombres">
+                      {nombreDeLaPropiedad.toUpperCase()}
+                    </label>
                     <label className="numeros">{valorDeLaPropiedad}</label>
                     <div className="gus">
                       <div
