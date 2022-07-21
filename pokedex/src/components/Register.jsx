@@ -1,47 +1,45 @@
 import "./register.css";
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+export default function Register() {
+  const [mail, setEmail] = useState("");
+  const navigate = useNavigate();
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
 
-export default function register() {
-    const [mail, setEmail] = useState("");
+  //-----------------seteando password y mail-------------------------//
+  const elmail = (e) => {
+    return setEmail(e.target.value);
+  };
 
-    const [password, setPassword] = useState("");
-    const [name, setName] = useState("");
+  const lapassword = (e) => {
+    setPassword(e.target.value);
+  };
+  const elname = (e) => {
+    setName(e.target.value);
+  };
 
-    //-----------------seteando password y mail-------------------------//
-    const elmail = (e) => {
-      return setEmail(e.target.value);
-    };
+  //---------------------------------------------------------------------//
+  const registrarUsuario = async (e) => {
+    e.preventDefault();
+    try {
+      const respuesta = await fetch("http://localhost:3010/register", {
+        method: "POST",
+        body: JSON.stringify({ mail, password, name }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
-    const lapassword = (e) => {
-      setPassword(e.target.value);
-    };
-    const elname = (e) => {
-      setName(e.target.value);
-    };
-
-    //---------------------------------------------------------------------//
-    const registrarUsuario = async (e) => {
-      e.preventDefault();
-      try {
-        const respuesta = await fetch("http://localhost:3010/register", {
-          method: "POST",
-          body: JSON.stringify({ mail, password, name }),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-
-        if (!respuesta.ok) {
-          throw new Error("Error en el servidor");
-        }
-        const usuarioFetch = await respuesta.json();
-        console.log(usuarioFetch);
-        localStorage.token = usuarioFetch.token;
-      } catch (error) {
-        console.log("No se pudo conectar con el back end");
+      if (!respuesta.ok) {
+        throw new Error("Error en el servidor");
       }
-    };
+      navigate("/login");
+    } catch (error) {
+      console.log("No se pudo conectar con el back end");
+    }
+  };
 
   return (
     <div className="contenedorl">
@@ -49,9 +47,7 @@ export default function register() {
       <div className="containerl">
         <div className="screen">
           <div className="screen__content">
-            <form
-              className="register" //onSubmit={registrarUsuario}
-            >
+            <form className="register" onSubmit={registrarUsuario}>
               <div className="login__field">
                 <i className="login__icon fas fa-user"></i>
 
@@ -60,7 +56,7 @@ export default function register() {
                   name="name"
                   className="login__input"
                   placeholder="User name"
-                  //   onChange={elname}
+                  onChange={elname}
                 />
               </div>
               <div className="login__field">
@@ -71,7 +67,7 @@ export default function register() {
                   name="email"
                   className="login__input"
                   placeholder="User name / Email"
-                  //   onChange={elmail}
+                  onChange={elmail}
                 />
               </div>
               <div className="login__field">
@@ -81,7 +77,7 @@ export default function register() {
                   type="password"
                   className="login__input"
                   placeholder="Password"
-                  //   onChange={lapassword}
+                  onChange={lapassword}
                 />
               </div>
               <button className="button login__submit">
