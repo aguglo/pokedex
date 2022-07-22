@@ -59,12 +59,14 @@ function Pokemones() {
           <div className="title">
             <img src={pokeball} alt="logo-pokeball" className="pokeball" />
             <h1>Pokédex</h1>
+            <div className="buttons">
             <Link to="/login">
-              <button>Login</button>
+              <button className="btn-login">Login</button>
             </Link>
             <Link to="/register">
-              <button>Register</button>
+              <button className="btn-register">Register</button>
             </Link>
+            </div>
           </div>
 
           <div className="title2">

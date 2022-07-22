@@ -9,7 +9,7 @@ function Login() {
 
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  
+
   const handleInputChange = (e) => {
     return setEmail(e.target.value);
   };
@@ -38,7 +38,6 @@ function Login() {
       const usuarioFetch = await respuesta.json();
       console.log(usuarioFetch);
       localStorage.token = usuarioFetch.token;
-
     } catch (error) {
       console.log("No se pudo conectar con el back end");
     }
@@ -46,52 +45,87 @@ function Login() {
 
   ///---------------------------------------------------------------------------------------------------------------------------------------------------------
   return (
-    <div className="contenedorl">
-      <h1 className="loginn">Login Pokemones</h1>
-      <div className="containerl">
-        <div className="screen">
-          <div className="screen__content">
-            <form className="login" onSubmit={logearUsuario}>
-              <div className="login__field">
-                <i className="login__icon fas fa-user"></i>
+    // <div className="contenedorl">
+    //   <h1 className="loginn">Login Pokemones</h1>
+    //   <div className="containerl">
+    //     <div className="screen">
+    //       <div className="screen__content">
+    //         <form className="login" onSubmit={logearUsuario}>
+    //           <div className="login__field">
+    //             <i className="login__icon fas fa-user"></i>
 
-                <input
-                  type="text"
-                  name="email"
-                  className="login__input"
-                  placeholder="User name / Email"
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="login__field">
-                <i className="login__icon fas fa-lock"></i>
+    //             <input
+    //               type="text"
+    //               name="email"
+    //               className="login__input"
+    //               placeholder="User name / Email"
+    //               onChange={handleInputChange}
+    //             />
+    //           </div>
+    //           <div className="login__field">
+    //             <i className="login__icon fas fa-lock"></i>
 
-                <input
-                  type="password"
-                  className="login__input"
-                  placeholder="Password"
-                  onChange={lapassword}
-                />
-              </div>
-              <button
-                className="button login__submit"
-                onClick={() => navigate(-1)}
-              >
-                <span className="button__text">Login</span>
-              </button>
-            </form>
-            <div className="social-login">
-              <Link to="/">
-                <button>Regresar</button>
-              </Link>
-            </div>
+    //             <input
+    //               type="password"
+    //               className="login__input"
+    //               placeholder="Password"
+    //               onChange={lapassword}
+    //             />
+    //           </div>
+    //           <button
+    //             className="button login__submit"
+    //             onClick={() => navigate(-1)}
+    //           >
+    //             <span className="button__text">Login</span>
+    //           </button>
+    //         </form>
+    //         <div className="social-login">
+    //           <Link to="/">
+    //             <button>Regresar</button>
+    //           </Link>
+    //         </div>
+    //       </div>
+    //       <div className="screen__background">
+    //         <span className="screen__background__shape screen__background__shape4"></span>
+    //         <span className="screen__background__shape screen__background__shape3"></span>
+    //         <span className="screen__background__shape screen__background__shape2"></span>
+    //         <span className="screen__background__shape screen__background__shape1"></span>
+    //       </div>
+    //     </div>
+    //   </div>
+    // </div>
+
+    <div>
+      <div>
+        <div class="titulos">
+          {/* <img src= alt="" class="logo"/> */}
+          <h2>Ingresa a tu cuenta</h2>
+        </div>
+        <form onSubmit={logearUsuario}>
+          <div class="contenedorInputs">
+            <p>Correo</p>
+            <input
+              type="email"
+              placeholder="Ingrese su correo"
+              onChange={handleInputChange}
+            />
+            <p>Contraseña</p>
+            <input
+              type="password"
+              placeholder="Ingrese su contraseña"
+              onChange={lapassword}
+            />
           </div>
-          <div className="screen__background">
-            <span className="screen__background__shape screen__background__shape4"></span>
-            <span className="screen__background__shape screen__background__shape3"></span>
-            <span className="screen__background__shape screen__background__shape2"></span>
-            <span className="screen__background__shape screen__background__shape1"></span>
+          <div class="ingresar">
+            <button class="buttonSol sol" onClick={() => navigate(-1)}>
+              Ingresar
+            </button>
           </div>
+        </form>
+        <div>
+          <Link to="/">
+            <button>Regresar</button>
+          </Link>
         </div>
       </div>
     </div>

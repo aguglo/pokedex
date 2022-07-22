@@ -42,60 +42,101 @@ export default function Register() {
   };
 
   return (
-    <div className="contenedorl">
-      <h1 className="loginn">Registrate</h1>
-      <div className="containerl">
-        <div className="screen">
-          <div className="screen__content">
-            <form className="register" onSubmit={registrarUsuario}>
-              <div className="login__field">
-                <i className="login__icon fas fa-user"></i>
+    // <div className="contenedorl">
+    //   <h1 className="loginn">Registrate</h1>
+    //   <div className="containerl">
+    //     <div className="screen">
+    //       <div className="screen__content">
+    //         <form className="register" onSubmit={registrarUsuario}>
+    //           <div className="login__field">
+    //             <i className="login__icon fas fa-user"></i>
 
-                <input
-                  type="text"
-                  name="name"
-                  className="login__input"
-                  placeholder="User name"
-                  onChange={elname}
-                />
-              </div>
-              <div className="login__field">
-                <i className="login__icon fas fa-user"></i>
+    //             <input
+    //               type="text"
+    //               name="name"
+    //               className="login__input"
+    //               placeholder="User name"
+    //               onChange={elname}
+    //             />
+    //           </div>
+    //           <div className="login__field">
+    //             <i className="login__icon fas fa-user"></i>
 
-                <input
-                  type="text"
-                  name="email"
-                  className="login__input"
-                  placeholder="User name / Email"
-                  onChange={elmail}
-                />
-              </div>
-              <div className="login__field">
-                <i className="login__icon fas fa-lock"></i>
+    //             <input
+    //               type="text"
+    //               name="email"
+    //               className="login__input"
+    //               placeholder="User name / Email"
+    //               onChange={elmail}
+    //             />
+    //           </div>
+    //           <div className="login__field">
+    //             <i className="login__icon fas fa-lock"></i>
 
-                <input
-                  type="password"
-                  className="login__input"
-                  placeholder="Password"
-                  onChange={lapassword}
-                />
-              </div>
-              <button className="button login__submit">
-                <span className="button__text">Login</span>
-              </button>
-            </form>
-            <div className="social-login">
-              <Link to="/">
-                <button>Regresar</button>
-              </Link>
-            </div>
+    //             <input
+    //               type="password"
+    //               className="login__input"
+    //               placeholder="Password"
+    //               onChange={lapassword}
+    //             />
+    //           </div>
+    //           <button className="button login__submit">
+    //             <span className="button__text">Login</span>
+    //           </button>
+    //         </form>
+    //         <div className="social-login">
+    //           <Link to="/">
+    //             <button>Regresar</button>
+    //           </Link>
+    //         </div>
+    //       </div>
+    //       <div className="screen__background">
+    //         <span className="screen__background__shape screen__background__shape4"></span>
+    //         <span className="screen__background__shape screen__background__shape3"></span>
+    //         <span className="screen__background__shape screen__background__shape2"></span>
+    //         <span className="screen__background__shape screen__background__shape1"></span>
+    //       </div>
+    //     </div>
+    //   </div>
+    // </div>
+
+    <div class="overlay" id="overlay">
+      <div class="popup" id="popup">
+        <div class="titulos">
+          {/* <img src= alt="" class=""/> */}
+          <h2>Registrate</h2>
+        </div>
+        <form onSubmit={registrarUsuario}>
+          <div class="contenedorInputs">
+            <p>Nombre</p>
+            <input
+              type="text"
+              placeholder="Nombre de usuario"
+              onChange={elname}
+            />
+            <p>Correo</p>
+            <input
+              type="email"
+              placeholder="Ingrese su correo"
+              onChange={elmail}
+            />
+            <p>Contraseña</p>
+            <input
+              type="password"
+              placeholder="Ingrese su contraseña"
+              onChange={lapassword}
+            />
           </div>
-          <div className="screen__background">
-            <span className="screen__background__shape screen__background__shape4"></span>
-            <span className="screen__background__shape screen__background__shape3"></span>
-            <span className="screen__background__shape screen__background__shape2"></span>
-            <span className="screen__background__shape screen__background__shape1"></span>
+          <div class="ingresar">
+            <button class="buttonSol sol" onClick={() => navigate(-1)}>
+              Ingresar
+            </button>
           </div>
+        </form>
+        <div>
+          <Link to="/">
+            <button>Registrar</button>
+          </Link>
         </div>
       </div>
     </div>

@@ -51,6 +51,22 @@ input {
 .headerr {
   height: 100px;
 }
+.buttons {
+  margin-left: 30px;
+}
+.buttons button {
+  margin: 10px;
+  border-radius: 15px;
+  background-color: rgb(246, 121, 121);
+  padding: 5px;
+  color: bisque;
+ border: 0ch;
+}
+.buttons button:hover {
+  color: rgb(246, 121, 121);
+  background-color: white;
+  transition: 0.5s;
+}
 h1 {
   font-family: "Bold", sans-serif;
   font-weight: 800;
