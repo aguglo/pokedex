@@ -16,7 +16,7 @@ function Pokemones() {
 
   const cargarPokemon = async () => {
     try {
-      const respuesta = await fetch("http://localhost:3010/pokemones", {
+      const respuesta = await fetch("http://localhost:3010/", {
         headers: { "auth-token": localStorage.token },
       });
       if (!respuesta.ok) {

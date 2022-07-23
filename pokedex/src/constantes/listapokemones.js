@@ -45,7 +45,7 @@ const pokemons = [
     cursor:
       " url(https://cur.cursors-4u.net/games/gam-7/gam648.cur), auto !important;",
     description:
-      "The flame on it's tail shows the strength of it's life force. If it is weak, the flame also burns weakly",
+      "8",
   },
 
   {

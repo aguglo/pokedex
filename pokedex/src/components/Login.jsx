@@ -9,7 +9,7 @@ function Login() {
 
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  
+
   const handleInputChange = (e) => {
     return setEmail(e.target.value);
   };
@@ -17,12 +17,9 @@ function Login() {
   const lapassword = (e) => {
     setPassword(e.target.value);
   };
-  const user = localStorage.getItem("password");
 
   //---------------------------------------------------------------------------------------------------------------------------------------------------------
-
-  const logearUsuario = async (e) => {
-    e.preventDefault();
+  const elclick = async () => {
     try {
       const respuesta = await fetch("http://localhost:3010/login", {
         method: "POST",
@@ -35,10 +32,11 @@ function Login() {
       if (!respuesta.ok) {
         throw new Error("Error en el servidor");
       }
-      const usuarioFetch = await respuesta.json();
-      console.log(usuarioFetch);
-      localStorage.token = usuarioFetch.token;
+      const userFetch = await respuesta.json();
+      localStorage.setItem("token", userFetch.token);
 
+      localStorage.token = userFetch.token;
+      // navigate(-1);
     } catch (error) {
       console.log("No se pudo conectar con el back end");
     }
@@ -51,7 +49,7 @@ function Login() {
       <div className="containerl">
         <div className="screen">
           <div className="screen__content">
-            <form className="login" onSubmit={logearUsuario}>
+            <form className="login">
               <div className="login__field">
                 <i className="login__icon fas fa-user"></i>
 
@@ -73,10 +71,7 @@ function Login() {
                   onChange={lapassword}
                 />
               </div>
-              <button
-                className="button login__submit"
-                onClick={() => navigate(-1)}
-              >
+              <button className="button login__submit" onClick={elclick}>
                 <span className="button__text">Login</span>
               </button>
             </form>
