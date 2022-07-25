@@ -6,14 +6,13 @@
 .delInput {
   display: flex;
   justify-content: center;
-  
+
   text-align: center;
-  
-  
 }
 .title {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
 .pokeball {
@@ -39,9 +38,17 @@
 input {
   display: flex;
   flex: 0 0 80%;
-  align-items: center;  
+  align-items: center;
   border-radius: 5px;
-  
+}
+.pokemon-agregar {
+  width: 400px;
+  border-color: black;
+}
+.contenedor_nuevo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .main {
   display: flex;
@@ -60,14 +67,104 @@ h1 {
   text-align: center;
 }
 
-:-moz-placeholder { /* Firefox 18- */
-  text-align: center;  
+:-moz-placeholder {
+  /* Firefox 18- */
+  text-align: center;
 }
 
-::-moz-placeholder {  /* Firefox 19+ */
-  text-align: center;  
+::-moz-placeholder {
+  /* Firefox 19+ */
+  text-align: center;
 }
 
-:-ms-input-placeholder {  
-  text-align: center; 
+:-ms-input-placeholder {
+  text-align: center;
+}
+.agregar-pokemon {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  overflow: hidden;
+  border-radius: 5px;
+  border: none;
+  background-color: #f57d31;
+}
+.agregar-pokemon:hover {
+  border-radius: 5px;
+  padding-right: 24px;
+  padding-left: 8px;
+}
+.agregar-pokemon:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+.agregar-pokemon:after {
+  content: "\00BB";
+  position: absolute;
+  opacity: 0;
+  font-size: 20px;
+  line-height: 40px;
+  top: 0;
+  right: -20px;
+  transition: 0.4s;
+}
+.login-boton {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 20px;
+  border: 2px solid #ffd819;
+  background: #f9cf30;
+}
+.login-boton:hover {
+  background: #fff;
+  color: #ffd819;
+}
+.register-boton {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  overflow: hidden;
+  border-radius: 20px;
+  border: none;
+  background-color: #3a86ff;
+}
+.register-boton:hover {
+  padding-right: 24px;
+  padding-left: 8px;
+}
+.register-boton:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+.register-boton:after {
+  content: "\00BB";
+  position: absolute;
+  opacity: 0;
+  font-size: 20px;
+  line-height: 40px;
+  top: 0;
+  right: -20px;
+  transition: 0.4s;
 }

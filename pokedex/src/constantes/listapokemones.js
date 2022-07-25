@@ -44,8 +44,7 @@ const pokemons = [
     type2color: "",
     cursor:
       " url(https://cur.cursors-4u.net/games/gam-7/gam648.cur), auto !important;",
-    description:
-      "8",
+    description: "8",
   },
 
   {
@@ -115,7 +114,7 @@ const pokemons = [
     cursor:
       " url(https://cur.cursors-4u.net/games/gam-7/gam648.cur), auto !important;",
     description:
-      "It keeps it's tail raised to monitor its surroundings. If you yank it's tail, it will try to bite you",
+      "It keeps its tail raised to monitor its surroundings. If you yank it's tail, it will try to bite you",
   },
   {
     name: "Gastly",
@@ -211,3 +210,13 @@ const pokemons = [
   },
 ];
 export default pokemons;
+//(45, 49, 49, 65, 65, 45, 1),
+// (39, 52, 43, 65, 60, 50, 2),
+// (44, 48, 65, 43, 50, 64, 3),
+// (60, 45, 50, 70, 90, 80, 4),
+// (35, 55, 40, 90, 50, 50, 5),
+// (30, 35, 30, 80, 100, 35, 6),
+// (48, 48, 48, 48, 48, 48, 7),
+// (100, 100, 100, 100, 100, 100, 8),
+// (50, 70, 100, 30, 40, 40, 9)
+// ;

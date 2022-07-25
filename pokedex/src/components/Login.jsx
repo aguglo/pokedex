@@ -19,7 +19,9 @@ function Login() {
   };
 
   //---------------------------------------------------------------------------------------------------------------------------------------------------------
-  const elclick = async () => {
+
+  const elclick = async (ev) => {
+    ev.preventDefault();
     try {
       const respuesta = await fetch("http://localhost:3010/login", {
         method: "POST",
@@ -28,7 +30,7 @@ function Login() {
           "Content-Type": "application/json",
         },
       });
-
+      console.log("login exitoso");
       if (!respuesta.ok) {
         throw new Error("Error en el servidor");
       }

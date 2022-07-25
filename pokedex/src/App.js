@@ -5,7 +5,8 @@ import { BrowserRouter } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
 import Infocontenedor from "./components/Infocontenedor.jsx";
 import Login from "./components/Login";
-import Register from "./components/Register";
+import Register from "./components/Registrar";
+import Agregar from "./components/Agregar";
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
             element={<Infocontenedor />}
           />
           <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+          <Route path="/registrar" element={<Register />} />
+          <Route path="/agregar" element={<Agregar />} />
         </Routes>
       </BrowserRouter>
     </div>

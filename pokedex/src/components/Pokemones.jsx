@@ -5,6 +5,7 @@ import pokeball from "../assets/Pokeball.png";
 import arrow from "../assets/Arrow.svg";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import agregar from "../assets/add.png";
 
 function Pokemones() {
   const [pokemon, setpokemon] = useState([]);
@@ -60,10 +61,10 @@ function Pokemones() {
             <img src={pokeball} alt="logo-pokeball" className="pokeball" />
             <h1>Pokédex</h1>
             <Link to="/login">
-              <button>Login</button>
+              <button className="login-boton">Login</button>
             </Link>
-            <Link to="/register">
-              <button>Register</button>
+            <Link to="/registrar">
+              <button className="register-boton">Register</button>
             </Link>
           </div>
 
@@ -92,6 +93,14 @@ function Pokemones() {
         </div>
       </header>
       <main>
+        <div className="contenedor_nuevo">
+          <Link to="/agregar">
+            <img className="pokemon-agregar" src={agregar} alt="" srcset="" />
+          </Link>
+          <Link to="/agregar">
+            <button className="agregar-pokemon">Agregar pokemon</button>
+          </Link>
+        </div>
         {pokemons ? (
           <div className="container">
             {pokemons.map((pokemon) => (

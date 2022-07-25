@@ -24,7 +24,7 @@ export default function Register() {
   const registrarUsuario = async (e) => {
     e.preventDefault();
     try {
-      const respuesta = await fetch("http://localhost:3010/register", {
+      const respuesta = await fetch("http://localhost:3010/registrar", {
         method: "POST",
         body: JSON.stringify({ mail, password, name }),
         headers: {
