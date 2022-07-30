@@ -38,7 +38,7 @@ function Login() {
       localStorage.setItem("token", userFetch.token);
 
       localStorage.token = userFetch.token;
-      // navigate(-1);
+      navigate(-1);
     } catch (error) {
       console.log("No se pudo conectar con el back end");
     }
@@ -73,6 +73,7 @@ function Login() {
                   onChange={lapassword}
                 />
               </div>
+
               <button className="button login__submit" onClick={elclick}>
                 <span className="button__text">Login</span>
               </button>

@@ -14,7 +14,9 @@
   align-items: center;
   gap: 10px;
 }
-
+.crea-tu-pokemon {
+  margin-top: 20px;
+}
 .pokeball {
   width: 30px;
   height: 30px;
@@ -42,8 +44,10 @@ input {
   border-radius: 5px;
 }
 .pokemon-agregar {
-  width: 400px;
+  width: 500px;
+  margin-top: 20px;
   border-color: black;
+  border-radius: 30px;
 }
 .contenedor_nuevo {
   display: flex;
